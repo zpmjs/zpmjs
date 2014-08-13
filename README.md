@@ -1,4 +1,4 @@
-# zpm [![spm version](http://spmjs.io/badge/zpm)](http://spmjs.io/package/zpm)
+# zpm [![spm version](http://spmjs.io/badge/zpm)](http://spmjs.io/package/zpm) [![Build Status](https://travis-ci.org/zpmjs/zpm.js.svg)](https://travis-ci.org/zpmjs/zpm.js) [![Coverage Status](https://coveralls.io/repos/zpmjs/zpm.js/badge.png)](https://coveralls.io/r/zpmjs/zpm.js)
 
 ---
 
@@ -25,3 +25,13 @@ zpmjs.use(["path/to/a", "path/to/b", "path/to/c"], function(A, B, C){
 });
 </script>
 ```
+
+## API
+
+### zpmjs.define(String id, Array dependencies, Function factory)
+
+
+### zpmjs.use(String ids, Function callback)
+
+
+### zpmjs.use(Array ids, Function callback)
