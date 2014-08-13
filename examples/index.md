@@ -8,6 +8,7 @@
 <script src='../zpm.js?nowrap'></script>
 <script>
 seajs.use(['./a.js?nowrap'], function() {
+  console.log("seajs:", seajs.require("a"))
 
   zpmjs.use("a", function(A){
     console.log(A)
