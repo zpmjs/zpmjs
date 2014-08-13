@@ -1,5 +1,5 @@
 {
-  "name": "zpm",
+  "name": "zpmjs",
   "version": "0.1.0",
   "description": "A mini module manager.",
   "keywords": ["Module", "Package", "Manager"],
@@ -11,6 +11,15 @@
   },
   "bugs": {
     "url": "https://github.com/hotoo/zpm.js/issues"
+  },
+  "devDependencies": {
+    "gulp": "3.8.6",
+    "gulp-uglify": "0.3.1",
+    "gulp-jsbeautify": "0.1.1",
+    "gulp-concat": "2.3.3",
+    "gulp-replace": "0.4.0",
+    "gulp-zip": "0.4.0",
+    "del": "0.1.1"
   },
   "licenses": "MIT",
   "spm": {

@@ -1,6 +1,7 @@
 version = $(shell cat package.json | grep version | awk -F'"' '{print $$4}')
 
 install:
+	@npm install
 	@spm install
 
 build-doc:
@@ -9,6 +10,8 @@ build-doc:
 publish-doc:
 	@spm doc publish
 
+build:
+	@./node_modules/gulp/bin/gulp.js build
 
 publish: publish-doc
 	@spm publish
