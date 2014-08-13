@@ -14,6 +14,7 @@ build:
 	@./node_modules/gulp/bin/gulp.js build
 
 publish: publish-doc
+	@npm publish
 	@spm publish
 	@git tag $(version)
 	@git push origin $(version)
