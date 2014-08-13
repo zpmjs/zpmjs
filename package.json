@@ -1,0 +1,22 @@
+{
+  "name": "zpm",
+  "version": "0.1.0",
+  "description": "A mini module manager.",
+  "keywords": [],
+  "homepage": "https://github.com/hotoo/zpm.js",
+  "author": "闲耘<hotoo.cn@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hotoo/zpm.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hotoo/zpm.js/issues"
+  },
+  "licenses": "MIT",
+  "spm": {
+    "main": "zpm.js",
+    "devDependencies": {
+      "expect.js": "0.3.1"
+    }
+  }
+}
