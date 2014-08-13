@@ -12,6 +12,12 @@ A mini module manager.
 $ spm install zpm --save
 ```
 
+## Build
+
+```
+make build
+```
+
 ## Usage
 
 ```html
