@@ -29,5 +29,9 @@ seajs.use(['./a.js?nowrap'], function() {
     console.log("child:", child);
   });
 });
+
+seajs.use(["./all-in-one.js?nowrap"], function(All){
+  console.log("all-in-one: seajs:", All);
+});
 </script>
 ````
