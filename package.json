@@ -2,7 +2,7 @@
   "name": "zpm",
   "version": "0.1.0",
   "description": "A mini module manager.",
-  "keywords": [],
+  "keywords": ["Module", "Package", "Manager"],
   "homepage": "https://github.com/hotoo/zpm.js",
   "author": "闲耘<hotoo.cn@gmail.com>",
   "repository": {
@@ -17,6 +17,7 @@
     "main": "zpm.js",
     "devDependencies": {
       "expect.js": "0.3.1"
-    }
+    },
+    "tests": "tests/*-spec.js"
   }
 }

@@ -1,5 +1,5 @@
 var expect = require('expect.js');
-var zpm = require('../index');
+var zpm = require('../zpm');
 
 describe('zpm', function() {
 
