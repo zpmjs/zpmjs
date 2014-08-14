@@ -1,4 +1,4 @@
-# zpm [![spm version](http://spmjs.io/badge/zpm)](http://spmjs.io/package/zpm) [![Build Status](https://travis-ci.org/zpmjs/zpm.js.svg)](https://travis-ci.org/zpmjs/zpm.js) [![Coverage Status](https://coveralls.io/repos/zpmjs/zpm.js/badge.png)](https://coveralls.io/r/zpmjs/zpm.js)
+# zpmjs [![spm version](http://spmjs.io/badge/zpmjs)](http://spmjs.io/package/zpmjs) [![Build Status](https://travis-ci.org/zpmjs/zpmjs.svg)](https://travis-ci.org/zpmjs/zpmjs) [![Coverage Status](https://coveralls.io/repos/zpmjs/zpmjs/badge.png)](https://coveralls.io/r/zpmjs/zpmjs)
 
 ---
 
@@ -9,7 +9,7 @@ A mini module manager.
 ## Install
 
 ```
-$ spm install zpm --save
+$ spm install zpmjs --save
 ```
 
 ## Build

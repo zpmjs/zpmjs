@@ -3,14 +3,14 @@
   "version": "0.2.0",
   "description": "A mini module manager.",
   "keywords": ["Module", "Package", "Manager"],
-  "homepage": "https://github.com/hotoo/zpm.js",
+  "homepage": "https://github.com/zpmjs/zpmjs",
   "author": "闲耘<hotoo.cn@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/hotoo/zpm.js.git"
+    "url": "git://github.com/zpmjs/zpmjs.git"
   },
   "bugs": {
-    "url": "https://github.com/hotoo/zpm.js/issues"
+    "url": "https://github.com/zpmjs/zpmjs/issues"
   },
   "devDependencies": {
     "gulp": "3.8.6",
