@@ -5,14 +5,14 @@
 
   if (!g_zpmjs) {
 
-    var zpmjs_cache = {}; // cache factory.
-    var zpmjs_data = {}; // modules.
+    var zpmjs_factory_cache = {}; // cache factory.
+    var zpmjs_exports_cache = {}; // modules.
 
     var zpmjs_require = function(id){
 
-      if (zpmjs_data[id]) { return zpmjs_data[id]; }
+      if (zpmjs_exports_cache[id]) { return zpmjs_exports_cache[id]; }
 
-      var factory = zpmjs_cache[id];
+      var factory = zpmjs_factory_cache[id];
 
       if (!factory) { return; }
 
@@ -21,18 +21,20 @@
         require: zpmjs_require
       };
 
-      zpmjs_data[id] =
+      zpmjs_exports_cache[id] =
         factory.call(global, zpmjs_require, module.exports, module) ||
         module.exports;
 
-      return zpmjs_data[id];
+      delete zpmjs_factory_cache[id];
+
+      return zpmjs_exports_cache[id];
     };
 
     var zpm_define = function(id, factory){
 
       if (zpmjs_require(id)) { return; }
 
-      zpmjs_cache[id] = factory;
+      zpmjs_factory_cache[id] = factory;
 
       if (typeof g_define === "function" && (g_define.cmd || g_define.amd)){
         g_define(id, [], factory);
