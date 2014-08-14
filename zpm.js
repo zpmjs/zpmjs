@@ -5,24 +5,34 @@
 
   if (!g_zpmjs) {
 
-    var zpmjs_cache = {};
+    var zpmjs_cache = {}; // cache factory.
+    var zpmjs_data = {}; // modules.
 
     var zpmjs_require = function(id){
-      return zpmjs_cache[id];
-    };
 
-    var zpm_define = function(id, factory){
+      if (zpmjs_data[id]) { return zpmjs_data[id]; }
+
+      var factory = zpmjs_cache[id];
+
+      if (!factory) { return; }
 
       var module = {
         exports: {},
         require: zpmjs_require
       };
 
+      zpmjs_data[id] =
+        factory.call(global, zpmjs_require, module.exports, module) ||
+        module.exports;
+
+      return zpmjs_data[id];
+    };
+
+    var zpm_define = function(id, factory){
+
       if (zpmjs_require(id)) { return; }
 
-      zpmjs_cache[id] =
-          factory.call(global, zpmjs_require, module.exports, module) ||
-          module.exports;
+      zpmjs_cache[id] = factory;
 
       if (typeof g_define === "function" && (g_define.cmd || g_define.amd)){
         g_define(id, [], factory);
