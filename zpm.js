@@ -52,7 +52,7 @@
           mods[i] = zpmjs_require(module_ids[i]);
         }
 
-        callback.apply(global, mods);
+        typeof callback == "function" && callback.apply(global, mods);
       },
       require: zpmjs_require,
       define: zpm_define
