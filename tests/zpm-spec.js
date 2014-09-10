@@ -1,6 +1,6 @@
 var expect = require('expect.js');
 
-require('../zpm.js?nowrap');
+require('../zpm');
 
 describe('zpm', function() {
 
@@ -24,7 +24,7 @@ describe('zpm', function() {
     done();
   });
 
-  it('zpmjs.define() and use()', function(done) {
+  it('zpmjs.define() and use(id)', function(done) {
 
     var zpmjs = window.zpmjs;
 
@@ -33,13 +33,13 @@ describe('zpm', function() {
       exports.name = "module-2";
     });
 
-    zpmjs.use(["module-2"], function(M){
+    zpmjs.use("module-2", function(M){
       expect(M.name).to.equal("module-2");
       done();
     });
   });
 
-  it('zpmjs.define(), use() but not callback', function(done) {
+  it('zpmjs.define() and use()', function(done) {
 
     var zpmjs = window.zpmjs;
 
@@ -48,11 +48,13 @@ describe('zpm', function() {
       exports.name = "module-3";
     });
 
-    zpmjs.use(["module-3"]);
-    done()
+    zpmjs.use(["module-3"], function(M){
+      expect(M.name).to.equal("module-3");
+      done();
+    });
   });
 
-  it('zpmjs.require()', function(done) {
+  it('zpmjs.define(), use() but not callback', function(done) {
 
     var zpmjs = window.zpmjs;
 
@@ -61,8 +63,21 @@ describe('zpm', function() {
       exports.name = "module-4";
     });
 
-    var M = zpmjs.require("module-4");
-    expect(M.name).to.equal("module-4");
+    zpmjs.use(["module-4"]);
+    done()
+  });
+
+  it('zpmjs.require()', function(done) {
+
+    var zpmjs = window.zpmjs;
+
+    zpmjs.define("module-5", function(require, exports, module){
+      expect("execute here.").to.equal("execute here.");
+      exports.name = "module-5";
+    });
+
+    var M = zpmjs.require("module-5");
+    expect(M.name).to.equal("module-5");
     done();
   });
 
