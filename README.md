@@ -35,7 +35,7 @@ var C = zpmjs.require("path/to/c");
 
 ## API
 
-### zpmjs.define([String id, Array dependencies,] Function factory)
+### zpmjs.define([String id, Function factory)
 
 
 ### Object zpmjs.require(String id)
