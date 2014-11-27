@@ -27,17 +27,15 @@ make build
 <script src="path/to/c.js"></script>
 
 <script>
-zpmjs.use(["path/to/a", "path/to/b", "path/to/c"], function(A, B, C){
-});
+var A = zpmjs.require("path/to/a");
+var B = zpmjs.require("path/to/b");
+var C = zpmjs.require("path/to/c");
 </script>
 ```
 
 ## API
 
-### zpmjs.define(String id, Array dependencies, Function factory)
+### zpmjs.define([String id, Array dependencies,] Function factory)
 
 
-### zpmjs.use(String ids, Function callback)
-
-
-### zpmjs.use(Array ids, Function callback)
+### Object zpmjs.require(String id)
