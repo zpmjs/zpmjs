@@ -31,7 +31,7 @@
 
     var zpm_define = function(id, factory){
 
-      if (zpmjs_require(id)) { return; }
+      if (zpmjs_exports_cache[id]) { return; }
 
       zpmjs_factory_cache[id] = factory;
 
