@@ -1,6 +1,6 @@
 {
   "name": "zpmjs",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A mini module manager.",
   "keywords": ["Module", "Package", "Manager"],
   "homepage": "https://github.com/zpmjs/zpmjs",
