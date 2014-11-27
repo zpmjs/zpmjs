@@ -41,19 +41,6 @@
     };
 
     global.zpmjs = {
-      use: function(module_ids, callback){
-        var mods = [];
-
-        if (!(module_ids instanceof Array)){
-          module_ids = [module_ids];
-        }
-
-        for(var i=0,l=module_ids.length; i<l; i++){
-          mods[i] = zpmjs_require(module_ids[i]);
-        }
-
-        typeof callback == "function" && callback.apply(global, mods);
-      },
       require: zpmjs_require,
       define: zpm_define
     };
